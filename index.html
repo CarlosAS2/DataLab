@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11142c">
+  <meta name="description" content="Mini laboratório interativo de JavaScript do 3º INTIN: aprenda arrays, índices, .length, .push() e objetos básicos brincando.">
+  <title>DataLab — Os Organizadores de Dados | 3º INTIN</title>
+  <meta name="author" content="Grupo 5 — 3º INTIN">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div class="nav-wrap"><nav class="shell" aria-label="Navegação principal">
+  <a href="#inicio" class="brand" aria-label="DataLab, voltar ao início"><span class="brand-logo">{ }</span><span>Data<span>Lab</span></span></a>
+  <div class="nav-links"><a href="#conceitos">Conceitos</a><a href="#arrays">Arrays</a><a href="#objetos">Objetos</a><a href="#missao">Missão</a><a href="#quiz">Quiz</a></div>
+  <span class="school-pill">3º INTIN · GRUPO 5</span>
+</nav></div>
+<main>
+<section class="hero shell" id="inicio">
+  <div>
+    <div class="eyebrow">Lógica e Interatividade · JavaScript</div>
+    <h1>Organize os dados. <span class="gradient">Domine o código.</span></h1>
+    <p>Você está no <strong>DataLab</strong>! Um mini projeto para aprender <strong>arrays</strong>, <strong>índices</strong>, <strong>.length</strong>, <strong>.push()</strong> e <strong>objetos</strong> — com desafios que você mesmo controla.</p>
+    <div class="actions"><a class="btn primary" href="#conceitos">Começar a aventura <span aria-hidden="true">↗</span></a><a class="btn secondary" href="#missao">Ir para o mini projeto</a></div>
+    <div class="stats"><div class="stat"><b>05</b><small>conceitos essenciais</small></div><div class="stat"><b>03</b><small>laboratórios práticos</small></div><div class="stat"><b>04</b><small>questões de revisão</small></div></div>
+  </div>
+  <div class="robot-card" aria-label="Ilustração de um robô com índices de array em seu monitor">
+    <div class="window-controls"><i></i><i></i><i></i></div>
+    <svg class="robot-illustration" viewBox="0 0 360 275" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="180" cy="247" rx="122" ry="13" fill="#0e1537" opacity=".5"/>
+      <path d="M178 28V51" stroke="#97f9f3" stroke-width="9" stroke-linecap="round"/><circle cx="178" cy="23" r="13" fill="#d8ff66"/>
+      <rect x="58" y="51" width="243" height="173" rx="45" fill="#b29aff" stroke="#f0e6ff" stroke-width="6"/>
+      <rect x="81" y="77" width="197" height="105" rx="26" fill="#181b3d"/>
+      <circle cx="127" cy="124" r="20" fill="#d8ff66"/><circle cx="229" cy="124" r="20" fill="#d8ff66"/>
+      <circle cx="131" cy="120" r="8" fill="#161b35"/><circle cx="225" cy="120" r="8" fill="#161b35"/>
+      <path d="M156 147Q179 164 200 147" fill="none" stroke="#6ce9e3" stroke-width="7" stroke-linecap="round"/>
+      <rect x="149" y="224" width="60" height="25" rx="12" fill="#6ce9e3"/>
+      <rect x="93" y="192" width="60" height="17" rx="9" fill="#dfe6ff" opacity=".65"/>
+      <rect x="208" y="192" width="57" height="17" rx="9" fill="#dfe6ff" opacity=".65"/>
+      <rect x="20" y="99" width="39" height="27" rx="11" fill="#d8ff66" transform="rotate(-18 40 110)"/>
+      <rect x="302" y="105" width="39" height="27" rx="11" fill="#6ce9e3" transform="rotate(18 322 119)"/>
+      <g font-family="system-ui,sans-serif" font-weight="900" font-size="20">
+        <rect x="15" y="202" width="68" height="44" rx="13" fill="#d8ff66"/><text x="29" y="231" fill="#1b2245">[0]</text>
+        <rect x="275" y="190" width="68" height="44" rx="13" fill="#6ce9e3"/><text x="291" y="219" fill="#1b2245">{ }</text>
+      </g>
+    </svg>
+    <div class="visual-label">Olá! Eu sou o Bit 🤖</div>
+    <p class="visual-note">Seu guia pelo universo dos dados.</p>
+  </div>
+</section>
+<section id="conceitos" class="section shell">
+  <div class="section-kicker">01 / AQUECIMENTO</div><h2 class="section-title">Primeiro, a ideia por trás do código.</h2>
+  <p class="section-lead">Imagine uma mochila com vários materiais e uma ficha com informações de uma pessoa. No JavaScript, usamos <strong>arrays</strong> para listas e <strong>objetos</strong> para conjuntos de características.</p>
+  <div class="learn-grid">
+    <article class="info-card"><div class="icon-circle">[ ]</div><h3>Array = lista</h3><p>Uma variável pode guardar vários itens em ordem. Exemplo: <span class="tiny-code">["Ana", "Bia"]</span>.</p></article>
+    <article class="info-card"><div class="icon-circle">#0</div><h3>Índice = posição</h3><p>Para acessar um item, usamos sua posição. <strong>A primeira posição é 0</strong>, não 1.</p></article>
+    <article class="info-card"><div class="icon-circle">{ }</div><h3>Objeto = ficha</h3><p>Armazena pares de propriedade e valor. Exemplo: <span class="tiny-code">{ nome: "Ana" }</span>.</p></article>
+  </div>
+</section>
+<section id="arrays" class="section shell">
+  <div class="section-kicker">02 / LABORATÓRIO DE ARRAYS</div><h2 class="section-title">Mexa na lista. Veja a mágica. ✨</h2>
+  <p class="section-lead">Clique em um cartão para acessar um índice. Depois, adicione um nome para testar o método <span class="tiny-code">.push()</span> e observe <span class="tiny-code">.length</span> atualizar automaticamente.</p>
+  <div class="lab"><div class="split"><div>
+    <div class="subhead"><h3>📦 Array <span class="tiny-code">frutas</span></h3><span class="pill" id="array-count">3 itens</span></div>
+    <div class="panel"><div id="array-cards" class="labels" aria-label="Elementos do array"></div><div class="meter"><span id="array-length">frutas.length = 3</span><span id="array-selected">índice selecionado = 0</span></div></div>
+    <p class="explain" id="array-explanation">O índice <strong>0</strong> é o primeiro elemento. Os índices começam em zero!</p>
+    <form id="array-form" class="input-row"><label class="sr-only" for="new-item">Nova fruta</label><input id="new-item" placeholder="Digite uma fruta..." maxlength="18" required autocomplete="off"><button class="btn primary" type="submit">+ Adicionar com .push()</button></form>
+    <button class="btn ghost" id="array-reset" type="button">↻ Reiniciar lista</button>
+    <div class="hint">💡 <b>.length</b> conta os elementos; <b>.push()</b> adiciona um elemento no fim do array.</div>
+  </div><div>
+    <div class="code-label">Código JavaScript equivalente</div><pre id="array-code"></pre>
+    <div class="output" role="status" aria-live="polite" id="array-output"></div>
+    <p class="hint">Tudo o que você faz nesta tela também pode ser escrito em JavaScript.</p>
+  </div></div></div>
+</section>
+<section id="objetos" class="section shell">
+  <div class="section-kicker">03 / LABORATÓRIO DE OBJETOS</div><h2 class="section-title">Crie a ficha de um estudante.</h2>
+  <p class="section-lead">Um objeto usa <strong>chaves</strong> <span class="tiny-code">{ }</span> para guardar informações por nome de propriedade, como <span class="tiny-code">nome</span>, <span class="tiny-code">idade</span> e <span class="tiny-code">turma</span>.</p>
+  <div class="lab"><div class="split"><div>
+    <div class="subhead"><h3>🪪 Objeto <span class="tiny-code">aluno</span></h3><span class="pill">Chave → valor</span></div>
+    <div class="panel"><div class="object-box"><div class="prop"><small>aluno.nome</small><strong id="obj-name-view">Ana</strong></div><div class="prop"><small>aluno.idade</small><strong id="obj-age-view">17</strong></div><div class="prop"><small>aluno.turma</small><strong id="obj-class-view">3º INTIN</strong></div><div class="prop"><small>tipo de estrutura</small><strong>{ ... }</strong></div></div></div>
+    <p class="explain">Preencha os dados e clique em <strong>Atualizar objeto</strong>.</p>
+    <form id="object-form" class="form-grid">
+      <div class="field"><label for="obj-name">Nome</label><input id="obj-name" maxlength="24" value="Ana" required></div>
+      <div class="field"><label for="obj-age">Idade</label><input id="obj-age" type="number" min="1" max="120" value="17" required></div>
+      <div class="field span-2"><label for="obj-class">Turma</label><input id="obj-class" maxlength="25" value="3º INTIN" required></div>
+      <div class="span-2 actions" style="margin-top:4px"><button class="btn primary" type="submit">Atualizar objeto</button><button class="btn ghost" id="object-reset" type="button">↻ Restaurar</button></div>
+    </form>
+  </div><div>
+    <div class="code-label">Objeto literal no JavaScript</div><pre id="object-code"></pre>
+    <div class="output" role="status" aria-live="polite" id="object-output"></div>
+    <div class="hint">🔎 Para acessar uma propriedade, escreva <b>aluno.nome</b> ou <b>aluno["nome"]</b>.</div>
+  </div></div></div>
+</section>
+<section id="missao" class="section shell">
+  <div class="section-kicker">04 / MINI PROJETO</div><h2 class="section-title">Missão: montar sua turma! 🚀</h2>
+  <p class="section-lead">Agora é hora de combinar os dois conhecimentos: <strong>um array que guarda vários objetos</strong>. Cadastre nomes e notas para criar uma pequena lista de estudantes.</p>
+  <div class="challenge-card"><div class="mission-badge">MISSÃO DO BIT · ARRAY + OBJETO</div><h3>Crie um cadastro de estudantes</h3><p>Você será o desenvolvedor! Adicione pelo menos <strong>3 estudantes</strong> para concluir a missão.</p>
+    <form id="mission-form" class="input-row" autocomplete="off"><label class="sr-only" for="mission-name">Nome do estudante</label><input id="mission-name" placeholder="Nome do estudante" maxlength="24" required><label class="sr-only" for="mission-grade">Nota entre 0 e 10</label><input id="mission-grade" type="number" min="0" max="10" step="0.1" placeholder="Nota (0–10)" required><button class="btn primary" type="submit">+ Cadastrar</button></form>
+    <div class="meter"><span id="mission-count">alunos.length = 0</span><span id="mission-progress">Missão: 0/3</span></div>
+    <div id="mission-roster" class="roster" aria-live="polite"><p>Nenhum estudante cadastrado. Comece acima! 👆</p></div>
+    <div class="actions"><button id="mission-reset" class="btn ghost" type="button">↻ Limpar cadastro</button></div>
+    <div class="code-label" style="margin-top:23px">Como fica o seu código</div><pre id="mission-code"></pre>
+    <div class="output" id="mission-output" role="status" aria-live="polite">Cadastre três estudantes para conquistar a missão!</div>
+  </div>
+</section>
+<section id="quiz" class="section shell">
+  <div class="section-kicker">05 / DESAFIO FINAL</div><h2 class="section-title">Você virou mestre dos dados?</h2>
+  <p class="section-lead">Responda às quatro perguntas para revisar os principais conceitos. A resposta aparece na hora, com uma explicação.</p>
+  <div class="quiz-wrap"><div class="lab">
+    <div class="quiz-progress"><span class="pill" id="quiz-number">Pergunta 1 de 4</span><div class="track"><div class="fill" id="quiz-bar"></div></div></div>
+    <h3 id="quiz-question">Carregando pergunta...</h3><div id="quiz-choices" class="quiz-choices"></div><div id="quiz-feedback" class="answer-feedback" aria-live="polite"></div>
+    <button class="btn primary" id="quiz-next" type="button" hidden>Próxima pergunta →</button>
+    <button class="btn primary" id="quiz-restart" type="button" hidden>↻ Refazer quiz</button>
+  </div><aside class="quiz-side"><div class="trophy" aria-hidden="true">🏆</div><p style="margin:6px 0">Seu placar</p><div class="score" id="quiz-score">0/4</div><p id="quiz-summary">Cada acerto é um passo a mais para dominar JavaScript!</p></aside></div>
+</section>
+</main>
+<footer class="shell footer">
+  <div><b style="color:var(--lime)">DataLab · 3º INTIN</b><br>Seminário: Lógica e Interatividade<br>Grupo 5 — Os Organizadores de Dados</div>
+  <div class="team"><b>Equipe:</b> Carlos André de Sousa Júnior · Carlos Antônio Abreu de Oliveira · Gabriel de Souza Oliveira · Jéssica Esteffany Olimpio Simão Mederios</div>
+  <div>Feito com 💜 e JavaScript.<br>Funciona <b>100% offline</b>.</div>
+</footer>
+</body>
+</html>
